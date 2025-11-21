@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sistema-licencas-api
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node main.js"
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: PORT
+        value: 3000
